@@ -79,7 +79,7 @@ const Map = () => {
       scrollWheelZoom={true}
     >
       <TileLayer
-        attribution='&copy; <a href=""> By Rose Nguyen </a> contributors'
+        attribution='&copy; <a href="https://github.com/omnomrose/Expo-Line-and-Millennium-Line.git"> By Rose Nguyen </a> contributors'
         url='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
       />
 
@@ -106,8 +106,6 @@ const Map = () => {
           <Polyline pathOptions={tealOptions} positions={polylineCoordinates} />
         )}
       </div>
-
-      <Polyline pathOptions={tealOptions} positions={polylineCoordinates} />
 
     </MapContainer>
   );
