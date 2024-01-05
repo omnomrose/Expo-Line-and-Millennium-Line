@@ -2,6 +2,7 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Polyline } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import Image from 'next/image';
 
 const icon = L.icon({
   iconUrl: "/images/marker-icon.png",
@@ -69,11 +70,18 @@ const darkBlueOptions = { color: 'darkblue' };
 const tealOptions = {color: 'teal'};
 
 const Map = () => {
-      const polylineCoordinates = polyline.map(station => station.location);
-
+  const polylineCoordinates = polyline.map(station => station.location);
   return (
+
+    <div>
+      <div style={{ padding: '1rem' }}>
+        <header>
+            <Image src="/images/logo.png" width={50} height={50} alt='bunnylogo'/>
+        </header>
+      </div>
+
     <MapContainer
-      style={{ height: "100vh" }}
+      style={{ height: "88vh" }}
       center={[49.2066, -122.9099]}
       zoom={12}
       scrollWheelZoom={true}
@@ -108,6 +116,7 @@ const Map = () => {
       </div>
 
     </MapContainer>
+    </div>
   );
 }
 
