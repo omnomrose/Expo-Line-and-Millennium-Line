@@ -98,7 +98,7 @@ const Map = () => {
 
         <div>
         {polyline.map((station, index) => (
-          <Marker key={`marker-${index}`} position={station.location} icon={tealIcon}>
+          <Marker key={index} position={station.location} icon={tealIcon}>
             <Popup>{station.name}</Popup>
           </Marker>
         ))}
